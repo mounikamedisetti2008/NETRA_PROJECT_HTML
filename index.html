@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NETRA - Robot Mission Control</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <!-- Left: Logo & Brand -->
+    <div class="brand">
+      <div class="logo-box">N</div>
+      <div class="brand-text">
+        <span class="brand-title">NETRA</span>
+        <span class="brand-subtitle">ROBOT MISSION CONTROL</span>
+      </div>
+    </div>
+
+    <!-- Center-Left: Navigation Links -->
+    <nav class="nav-links">
+      <a href="#dashboard" class="active">Dashboard</a>
+      <a href="#fleet">Fleet</a>
+      <a href="#telemetry">Telemetry</a>
+      <a href="#alerts">Alerts</a>
+    </nav>
+
+    <!-- Center-Right: System Status & Clock -->
+    <div class="status-group">
+      <div class="system-status">
+        <span class="status-dot"></span>
+        <span class="status-text">SYSTEM ONLINE</span>
+      </div>
+      <span class="clock" id="clock">5:22:09 AM</span>
+    </div>
+
+    <!-- Right: Action Button -->
+    <div class="nav-action">
+      <button class="dispatch-btn">+ Dispatch Mission</button>
+    </div>
+  </header>
+
+  <!-- Optional: Live ticking clock script -->
+  <script>
+    function updateClock() {
+      const now = new Date();
+      document.getElementById('clock').textContent = now.toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+      });
+    }
+    setInterval(updateClock, 1000);
+  </script>
+
+</body>
+</html>
+
