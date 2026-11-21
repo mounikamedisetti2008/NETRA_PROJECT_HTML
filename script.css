@@ -1,0 +1,61 @@
+
+/* Additional effects */
+
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navigation a {
+    padding: 5px 0;
+}
+
+.navigation a:hover {
+    color: #46a0ff;
+}
+
+.dispatch-btn:active {
+    transform: scale(0.96);
+}
+
+/* Responsive design */
+
+@media screen and (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        padding: 12px;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navigation {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .status {
+        font-size: 8px;
+    }
+
+    .dispatch-btn {
+        padding: 8px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .logo-text h2 {
+        font-size: 16px;
+    }
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 9px;
+    }
+}
+
+
